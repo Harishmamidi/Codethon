@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Harish Hitesh</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="harish-global.css">
+      <link rel="stylesheet" href="harish-landing.css">
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+              <li class="menu__item"><a href="https://github.com/Harishmamidi" class="link link--dark" target="_blank"><i class="fa fa-github"></i> Github</a></li>
+              <li class="menu__item"><a href="https://www.dropbox.com/s/i2vigbt50ge81wp/sol.iso?dl=0"></i> UNIX</a></li>
+              <li class="menu__item"><a href="https://www.dropbox.com/s/5irqz19k5yf703j/vm.zip?dl=0"><i class="fa fa-window-restore"></i> VM WARE</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">CODETHON</h1>
+      <p class="hero__description">Take your markdown notes in terminal</p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <!-- Place your demo code here -->
+        <code class="shell-session demo">HeartyWelcome ~ $ </code>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Porblem Name</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="mac">Palindrome</li>
+            <li class="tab" data-tab="linux">Fibonnaci</li>
+            <li class="tab" data-tab="win">Factorial</li>
+            <li class="tab" data-tab="bubble">Bubble Sort</li>
+            <li class="tab" data-tab="third">Third Largest Number</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active mac"><pre>#include "iostream"
+using namespace std;
+int isPalin(int n){
+  int r = 0;
+  for(int i = n; i > 0; i /= 10){
+  r = r*10 +i%10;
+  }
+if(n==r){
+  cout<<"Given Number is Palindrome";
+  }
+else{
+  cout<<"Not Palindrome"
+}
+}
+
+int main(){
+  cin>>n;
+  isPalin(n);
+  return 0;
+}</pre></code>
+            <code class="tab__pane linux"><pre>#include "iostream"
+int fib(int n){
+  if(n <= 1)
+    return n;
+  return fib(n-1) + fib(n-2);
+}
+
+int main(){
+  int n;
+  cin>>n;
+  cout<< fib(n);
+  return 0;
+}
+</pre></code>
+            <code class="tab__pane win" ><pre>#include "iostream"
+int fact(int n){
+  if(n==0)
+    return 1;
+  return n*fact(n-1);
+}
+
+int main(){
+  int n;
+  cin>>>n;
+  cout<< fact(n);
+  return 0;
+}
+</pre></code>
+            <code class="tab__pane bubble" ><pre>#include "iostream"
+void swap(int *x, int *y){
+  int temp = *xp;
+  *xp = *yp;
+  *yp = temp;
+}
+void bubbleSort(int a[], int n){
+  int i,j;
+  bool swapped;
+  for(i=0;i < n-1;i++){
+    swapped = false;
+    for(j=0;j < n-i-1; j++){
+    if(a[j] > a[j+1]){
+      swap(&a[j],&a[j+1]);
+      swapped = true;
+    }
+  }
+  if(swapped == false){
+    break;
+  }
+}}</pre></code>
+            <code class="tab__pane third" ><pre>#include "iostream"
+void third(int a[], int as){
+  if(as < 3){
+    cout<<"Invalid Input";
+    return;
+  }
+  int first = a[0];
+  for(int i = 1; i < as;i++){
+    if(a[i] > first)
+      first = a[i];
+  }
+  int second = INT_MIN;
+  for(int i = 0; i < as;I++){
+    if(a[i] > second && a[i] < first)
+      second = a[i];
+  }
+  for (int i = 0; i < arr_size ; i++)
+        if (arr[i] > third && arr[i] < second)
+            third = arr[i];
+  cout<<"Third Largest is : "<< third;
+}
+
+int main(){
+  int a[] = {10,12,13,34,8,3,34};
+  int n = sizeof(arr)/sizeof(a[0]);
+  third(a,n);
+  return 0;
+}
+            </pre></code>
+          </pre>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">Palindrome</h3>
+          <p>A word, phrase, or sequence that reads the same backward as forward</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Fibonacci</h3>
+          <p>A series of numbers in which each number ( Fibonacci number ) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Factorial of a Number</h3>
+          <p>The product of an integer and all the integers below it; e.g. factorial four ( 4! ) is equal to 24.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Bubble Sorting</h3>
+          <p>Bubble sort, sometimes referred to as sinking sort, is a simple <span class="code code--inline">Sorting&nbsp;algorithm</span>that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Third Largest Number</h3>
+          <p>Here we will find the third largest number from the given Array</p>
+        </div>
+
+      </div>
+
+      <!-- <div class="callout">
+        <p></p>
+        <a href="rs.pdf" class="button--primary" target="_blank">My Resume</a>
+      </div> -->
+    </div>
+
+    <footer class="footer">&copy;All rights reserved 2018<a href="https://github.com/Harishmamidi" target="_blank" class="link link--light">&nbsp;Venkata Harish Kumar Mamidi</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="harish.js"></script>
+  </body>
+</html>
